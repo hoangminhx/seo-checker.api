@@ -13,3 +13,5 @@
 /SEOChecker.Domain/obj
 /SEOChecker.Infrastructure/bin/Debug/net8.0
 /SEOChecker.Infrastructure/obj
+/SEOChecker.Tests/bin/Debug/net8.0
+/SEOChecker.Tests/obj

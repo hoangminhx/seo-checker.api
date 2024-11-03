@@ -13,6 +13,8 @@ namespace SEOChecker.Infrastructure
             services.AddTransient<GoogleSearchService>();
             services.AddTransient<BingSearchService>();
             services.AddTransient<ISearchServiceFactory, SearchServiceFactory>();
+            services.AddTransient<IMemoryCacheService, MemoryCacheService>();
+            services.AddTransient<IHtmlService, HtmlService>();
             return services;
         }
     }

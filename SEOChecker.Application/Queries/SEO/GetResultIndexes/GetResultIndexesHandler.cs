@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
 using SEOChecker.Application.DTOs.SEO;
 using SEOChecker.Application.Interfaces;
@@ -9,13 +8,13 @@ namespace SEOChecker.Application.Queries.SEO.GetResultIndexes
 {
     public class GetResultIndexesHandler : IRequestHandler<GetResultIndexesQuery, SEOResponseDto>
     {
-        private readonly IMemoryCache memoryCache;
+        private readonly IMemoryCacheService memoryCacheService;
         private readonly ISearchServiceFactory searchServiceFactory;
         private readonly AppSettingsModel appSettings;
 
-        public GetResultIndexesHandler(IMemoryCache memoryCache, ISearchServiceFactory searchServiceFactory, IOptions<AppSettingsModel> options)
+        public GetResultIndexesHandler(IMemoryCacheService memoryCacheService, ISearchServiceFactory searchServiceFactory, IOptions<AppSettingsModel> options)
         {
-            this.memoryCache = memoryCache;
+            this.memoryCacheService = memoryCacheService;
             this.searchServiceFactory = searchServiceFactory;
             appSettings = options.Value;
         }
@@ -54,7 +53,7 @@ namespace SEOChecker.Application.Queries.SEO.GetResultIndexes
             string key = $"{searchEngine}_{request.Keyword}_{request.Target}_{request.Range.ToString()}";
 
             SearchEngineResultDto? result;
-            memoryCache.TryGetValue(key, out result);
+            memoryCacheService.TryGetValue(key, out result);
 
             return result;
         }
@@ -67,12 +66,10 @@ namespace SEOChecker.Application.Queries.SEO.GetResultIndexes
             {
                 string key = $"{searchEngine}_{request.Keyword}_{request.Target}_{request.Range.ToString()}";
 
-                var cacheEntryOptions = new MemoryCacheEntryOptions
-                {
-                    AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(appSettings.CacheDurationInSecond) // Item expires after x seconds
-                };
+                SearchEngineResultDto? result = response.Result.FirstOrDefault(c => c.SearchEngine == searchEngine);
+                TimeSpan expiration = TimeSpan.FromSeconds(appSettings.CacheDurationInSecond);
 
-                memoryCache.Set(key, response.Result.FirstOrDefault(c => c.SearchEngine == searchEngine), cacheEntryOptions);
+                memoryCacheService.Set(key, result, expiration);
             }
         }
     }
