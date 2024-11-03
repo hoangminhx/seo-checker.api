@@ -7,7 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.4.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SEOChecker.Application\SEOChecker.Application.csproj" />
+    <ProjectReference Include="..\SEOChecker.Common\SEOChecker.Common.csproj" />
+    <ProjectReference Include="..\SEOChecker.Infrastructure\SEOChecker.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

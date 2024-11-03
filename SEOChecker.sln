@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEOChecker.API", "SEOChecker.API\SEOChecker.API.csproj", "{DA1A7BDF-0B84-4F23-AF77-8975362EEF84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SEOChecker.API", "SEOChecker.API\SEOChecker.API.csproj", "{DA1A7BDF-0B84-4F23-AF77-8975362EEF84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEOChecker.Application", "SEOChecker.Application\SEOChecker.Application.csproj", "{EE82CAB3-71C5-4966-BD27-C399A46351E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEOChecker.Domain", "SEOChecker.Domain\SEOChecker.Domain.csproj", "{FB9A1050-2F63-47FF-939F-FA63C6EDDEE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEOChecker.Infrastructure", "SEOChecker.Infrastructure\SEOChecker.Infrastructure.csproj", "{E9230D97-EFEB-4DD8-A6FF-9422EA4EAF23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEOChecker.Common", "SEOChecker.Common\SEOChecker.Common.csproj", "{CED16EF3-1D07-4106-8212-A3663457E321}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{DA1A7BDF-0B84-4F23-AF77-8975362EEF84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA1A7BDF-0B84-4F23-AF77-8975362EEF84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA1A7BDF-0B84-4F23-AF77-8975362EEF84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE82CAB3-71C5-4966-BD27-C399A46351E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE82CAB3-71C5-4966-BD27-C399A46351E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE82CAB3-71C5-4966-BD27-C399A46351E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE82CAB3-71C5-4966-BD27-C399A46351E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB9A1050-2F63-47FF-939F-FA63C6EDDEE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB9A1050-2F63-47FF-939F-FA63C6EDDEE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB9A1050-2F63-47FF-939F-FA63C6EDDEE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB9A1050-2F63-47FF-939F-FA63C6EDDEE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9230D97-EFEB-4DD8-A6FF-9422EA4EAF23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9230D97-EFEB-4DD8-A6FF-9422EA4EAF23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9230D97-EFEB-4DD8-A6FF-9422EA4EAF23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9230D97-EFEB-4DD8-A6FF-9422EA4EAF23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CED16EF3-1D07-4106-8212-A3663457E321}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CED16EF3-1D07-4106-8212-A3663457E321}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CED16EF3-1D07-4106-8212-A3663457E321}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CED16EF3-1D07-4106-8212-A3663457E321}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

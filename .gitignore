@@ -4,3 +4,12 @@
 
 /SEOChecker.API/bin/Debug/net8.0
 /SEOChecker.API/obj
+/.vs
+/SEOChecker.Application/bin/Debug/net8.0
+/SEOChecker.Application/obj
+/SEOChecker.Common/bin/Debug/net8.0
+/SEOChecker.Common/obj
+/SEOChecker.Domain/bin/Debug/net8.0
+/SEOChecker.Domain/obj
+/SEOChecker.Infrastructure/bin/Debug/net8.0
+/SEOChecker.Infrastructure/obj
